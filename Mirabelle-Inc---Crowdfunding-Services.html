@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirabelle Inc - Empowering Dreams through Crowdfunding & Grants</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FFD700',
+secondary: '#DAA520'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.gradient-text {
+background: linear-gradient(135deg, #FFD700, #DAA520);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.gold-gradient {
+background: linear-gradient(135deg, #FFD700, #DAA520);
+}
+.hero-bg {
+background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.1) 0%, rgba(26, 26, 26, 1) 70%);
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-8px);
+}
+.testimonial-card {
+min-width: 350px;
+max-width: 400px;
+}
+.scroll-smooth {
+scroll-behavior: smooth;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #FFD700;
+box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+.mobile-menu {
+transform: translateX(-100%);
+transition: transform 0.3s ease;
+}
+.mobile-menu.active {
+transform: translateX(0);
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white font-inter scroll-smooth">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex items-center justify-between h-20">
+<div class="text-2xl font-playfair font-bold gradient-text">
+Mirabelle Inc
+</div>
+<!-- Desktop Menu -->
+<div class="hidden lg:flex items-center space-x-8">
+<a href="#home" class="text-gray-300 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="text-gray-300 hover:text-primary transition-colors">About</a>
+<a href="#services" class="text-gray-300 hover:text-primary transition-colors">Services</a>
+<a href="#success" class="text-gray-300 hover:text-primary transition-colors">Success Stories</a>
+<a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="hidden lg:block">
+<button class="gold-gradient text-gray-900 px-6 py-3 !rounded-button font-semibold hover:opacity-90 transition-opacity whitespace-nowrap">
+Get Started
+</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu fixed top-0 left-0 w-full h-full bg-gray-900 z-40 lg:hidden" id="mobile-menu">
+<div class="flex flex-col items-center justify-center h-full space-y-8">
+<a href="#home" class="text-2xl text-gray-300 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="text-2xl text-gray-300 hover:text-primary transition-colors">About</a>
+<a href="#services" class="text-2xl text-gray-300 hover:text-primary transition-colors">Services</a>
+<a href="#success" class="text-2xl text-gray-300 hover:text-primary transition-colors">Success Stories</a>
+<a href="#contact" class="text-2xl text-gray-300 hover:text-primary transition-colors">Contact</a>
+<button class="gold-gradient text-gray-900 px-8 py-4 !rounded-button font-semibold whitespace-nowrap">
+Get Started
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center hero-bg relative overflow-hidden">
+<div class="absolute inset-0 w-full h-full">
+<iframe
+class="absolute inset-0 w-full h-full object-cover"
+src="https://www.youtube.com/embed/VCPGMjCW0is?autoplay=1&controls=0&mute=1&loop=1&playlist=VCPGMjCW0is&showinfo=0&rel=0&modestbranding=1"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen
+></iframe>
+<div class="absolute inset-0 bg-black/70 backdrop-blur-[1px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
+<h1 class="text-5xl lg:text-7xl font-playfair font-bold mb-6">
+<span class="gradient-text">Mirabelle Inc</span>
+</h1>
+<p class="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+Empowering Dreams through Crowdfunding & Grants
+</p>
+<p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+We help creators, innovators, and nonprofits unlock funding opportunities through strategic crowdfunding campaigns and grant proposal expertise.
+</p>
+<button class="gold-gradient text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg hover:opacity-90 transition-opacity whitespace-nowrap">
+Explore Our Services
+</button>
+</div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+<i class="ri-arrow-down-line text-primary text-2xl"></i>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 lg:py-32 bg-gray-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl lg:text-5xl font-playfair font-bold mb-8 gradient-text">
+Our Mission
+</h2>
+<div class="w-20 h-1 gold-gradient mb-8"></div>
+<p class="text-lg text-gray-300 mb-6 leading-relaxed">
+At Mirabelle Inc, we believe every innovative idea deserves the chance to flourish. Our mission is to bridge the gap between visionary creators and the funding they need to bring their dreams to life.
+</p>
+<p class="text-lg text-gray-300 mb-8 leading-relaxed">
+With years of expertise in crowdfunding strategy and grant writing, we've helped countless entrepreneurs, filmmakers, nonprofits, and innovators secure the resources they need to make a meaningful impact.
+</p>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 gold-gradient !rounded-button flex items-center justify-center">
+<i class="ri-trophy-line text-gray-900 text-xl"></i>
+</div>
+<div>
+<p class="font-semibold text-primary">95% Success Rate</p>
+<p class="text-gray-400">In funded campaigns</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20diverse%20team%20of%20consultants%20working%20together%20in%20modern%20office%2C%20golden%20hour%20lighting%2C%20business%20strategy%20meeting%2C%20elegant%20corporate%20environment%2C%20people%20collaborating%20on%20funding%20proposals%2C%20warm%20professional%20atmosphere&width=600&height=600&seq=about-img&orientation=squarish'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div></div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 gold-gradient rounded-2xl opacity-20"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 lg:py-32 bg-gray-900">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-playfair font-bold mb-6 gradient-text">
+Our Services
+</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Comprehensive funding solutions tailored to your unique vision and goals
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-800 p-8 rounded-2xl card-hover border border-gray-700">
+<div class="w-16 h-16 gold-gradient !rounded-button flex items-center justify-center mb-6">
+<i class="ri-rocket-line text-gray-900 text-2xl"></i>
+</div>
+<h3 class="text-2xl font-playfair font-semibold mb-4 text-primary">
+Crowdfunding Campaign Strategy
+</h3>
+<p class="text-gray-300 mb-6 leading-relaxed">
+From campaign planning to launch execution, we create compelling narratives that resonate with backers and drive funding success.
+</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Learn More →
+</a>
+</div>
+<div class="bg-gray-800 p-8 rounded-2xl card-hover border border-gray-700">
+<div class="w-16 h-16 gold-gradient !rounded-button flex items-center justify-center mb-6">
+<i class="ri-file-text-line text-gray-900 text-2xl"></i>
+</div>
+<h3 class="text-2xl font-playfair font-semibold mb-4 text-primary">
+Grant Proposal Writing & Consulting
+</h3>
+<p class="text-gray-300 mb-6 leading-relaxed">
+Professional grant writing services that maximize your chances of securing funding from foundations, government agencies, and institutions.
+</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Learn More →
+</a>
+</div>
+<div class="bg-gray-800 p-8 rounded-2xl card-hover border border-gray-700">
+<div class="w-16 h-16 gold-gradient !rounded-button flex items-center justify-center mb-6">
+<i class="ri-team-line text-gray-900 text-2xl"></i>
+</div>
+<h3 class="text-2xl font-playfair font-semibold mb-4 text-primary">
+Community Engagement & Funding Roadmaps
+</h3>
+<p class="text-gray-300 mb-6 leading-relaxed">
+Build engaged communities around your project and develop comprehensive funding strategies that align with your long-term vision.
+</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Learn More →
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories Section -->
+<section id="success" class="py-20 lg:py-32 bg-gray-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-playfair font-bold mb-6 gradient-text">
+Success Stories
+</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Real results from real clients who trusted us with their funding journey
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=elegant%20skincare%20products%20arranged%20beautifully%20on%20marble%20surface%2C%20natural%20lighting%2C%20premium%20cosmetic%20brand%20photography%2C%20clean%20minimalist%20aesthetic%2C%20luxury%20beauty%20products%2C%20soft%20golden%20lighting&width=400&height=300&seq=success-1&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">Crowdfunding</span>
+<span class="text-2xl font-bold text-primary">£18,200</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">PureBloom Skincare</h3>
+<p class="text-gray-400 mb-2">Emily Hartwell • United Kingdom</p>
+<p class="text-gray-300 text-sm">Raised in 25 days for organic skincare line launch</p>
+</div>
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20filmmaker%20with%20camera%20equipment%20in%20cinematic%20lighting%2C%20documentary%20production%20setup%2C%20creative%20workspace%2C%20artistic%20film%20making%20environment%2C%20dramatic%20lighting%20with%20golden%20accents&width=400&height=300&seq=success-2&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">Crowdfunding</span>
+<span class="text-2xl font-bold text-primary">$42,000</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">Documentary Film</h3>
+<p class="text-gray-400 mb-2">Jason Rivera • Filmmaker</p>
+<p class="text-gray-300 text-sm">Funded independent documentary about social justice</p>
+</div>
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=community%20food%20bank%20volunteers%20organizing%20fresh%20produce%20and%20healthy%20meals%2C%20warm%20community%20center%20environment%2C%20people%20helping%20families%2C%20social%20impact%20nonprofit%20work%2C%20caring%20atmosphere&width=400&height=300&seq=success-3&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-secondary/20 text-secondary text-sm rounded-full">Grant</span>
+<span class="text-2xl font-bold text-primary">CA$15,000</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">NourishNow</h3>
+<p class="text-gray-400 mb-2">Clara Jensen • Canada</p>
+<p class="text-gray-300 text-sm">Community nutrition program for underserved families</p>
+</div>
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=modern%20solar%20panel%20installation%20on%20residential%20building%2C%20clean%20energy%20technology%2C%20sustainable%20innovation%2C%20bright%20blue%20sky%2C%20environmental%20technology%2C%20green%20energy%20solutions&width=400&height=300&seq=success-4&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-secondary/20 text-secondary text-sm rounded-full">Grant</span>
+<span class="text-2xl font-bold text-primary">€95,000</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">SolaraTech</h3>
+<p class="text-gray-400 mb-2">Alexander Stein • Germany</p>
+<p class="text-gray-300 text-sm">Clean energy innovation grant for solar technology</p>
+</div>
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=diverse%20women%20learning%20coding%20and%20programming%20in%20modern%20tech%20classroom%2C%20collaborative%20learning%20environment%2C%20laptops%20and%20technology%2C%20empowering%20education%2C%20professional%20development%20setting&width=400&height=300&seq=success-5&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-secondary/20 text-secondary text-sm rounded-full">Grant</span>
+<span class="text-2xl font-bold text-primary">€60,000</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">CodeFemme</h3>
+<p class="text-gray-400 mb-2">Sophie Delacroix • France</p>
+<p class="text-gray-300 text-sm">EU grant for women in tech education program</p>
+</div>
+<div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 card-hover">
+<div class="aspect-video rounded-lg overflow-hidden mb-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=vibrant%20urban%20art%20mural%20being%20painted%20by%20community%20artists%2C%20colorful%20street%20art%2C%20creative%20collaboration%2C%20city%20neighborhood%20revitalization%2C%20artistic%20expression%2C%20community%20engagement&width=400&height=300&seq=success-6&orientation=landscape'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-secondary/20 text-secondary text-sm rounded-full">Grant</span>
+<span class="text-2xl font-bold text-primary">$40,000</span>
+</div>
+<h3 class="text-xl font-playfair font-semibold mb-2">Urban Arts</h3>
+<p class="text-gray-400 mb-2">Lucas Bennett • USA</p>
+<p class="text-gray-300 text-sm">National arts grant for community mural project</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 lg:py-32 bg-gray-900">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-playfair font-bold mb-6 gradient-text">
+What Our Clients Say
+</h2>
+</div>
+<div class="flex overflow-x-auto space-x-6 pb-4" style="scroll-snap-type: x mandatory;">
+<div class="testimonial-card bg-gray-800 p-8 rounded-2xl border border-gray-700 flex-shrink-0" style="scroll-snap-align: start;">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20confident%20businesswoman%20Emily%20Hartwell%2C%20elegant%20business%20attire%2C%20warm%20smile%2C%20professional%20headshot%2C%20corporate%20photography%2C%20natural%20lighting&width=100&height=100&seq=testimonial-1&orientation=squarish'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div>
+<h4 class="font-semibold text-primary">Emily Hartwell</h4>
+<p class="text-gray-400 text-sm">PureBloom Skincare</p>
+</div>
+</div>
+<p class="text-gray-300 italic leading-relaxed">
+"Mirabelle Inc transformed our crowdfunding campaign from a simple idea into a compelling story that resonated with thousands of backers. Their strategic approach helped us exceed our funding goal."
+</p>
+</div>
+<div class="testimonial-card bg-gray-800 p-8 rounded-2xl border border-gray-700 flex-shrink-0" style="scroll-snap-align: start;">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20filmmaker%20Jason%20Rivera%2C%20creative%20artist%20headshot%2C%20confident%20expression%2C%20artistic%20background%2C%20professional%20photography%2C%20warm%20lighting&width=100&height=100&seq=testimonial-2&orientation=squarish'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div>
+<h4 class="font-semibold text-primary">Jason Rivera</h4>
+<p class="text-gray-400 text-sm">Independent Filmmaker</p>
+</div>
+</div>
+<p class="text-gray-300 italic leading-relaxed">
+"The team's expertise in storytelling and community building was instrumental in our documentary's success. They understood our vision and helped bring it to life through strategic funding."
+</p>
+</div>
+<div class="testimonial-card bg-gray-800 p-8 rounded-2xl border border-gray-700 flex-shrink-0" style="scroll-snap-align: start;">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20portrait%20of%20nonprofit%20director%20Clara%20Jensen%2C%20compassionate%20leader%2C%20warm%20smile%2C%20professional%20business%20attire%2C%20community%20service%20background%2C%20natural%20lighting&width=100&height=100&seq=testimonial-3&orientation=squarish'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+<div>
+<h4 class="font-semibold text-primary">Clara Jensen</h4>
+<p class="text-gray-400 text-sm">NourishNow Director</p>
+</div>
+</div>
+<p class="text-gray-300 italic leading-relaxed">
+"Their grant writing expertise opened doors we never thought possible. The professional quality of their proposals and deep understanding of funding landscapes made all the difference."
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 lg:py-32 bg-gray-800">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl lg:text-5xl font-playfair font-bold mb-6 gradient-text">
+Start Your Funding Journey
+</h2>
+<p class="text-xl text-gray-300 max-w-2xl mx-auto">
+Ready to turn your vision into reality? Let's discuss how we can help you secure the funding you need.
+</p>
+</div>
+<div class="bg-gray-900 p-8 lg:p-12 rounded-2xl border border-gray-700">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
+<input type="text" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary transition-colors">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+<input type="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary transition-colors">
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
+<select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-primary transition-colors pr-8">
+<option>Crowdfunding Campaign</option>
+<option>Grant Application</option>
+<option>Both Crowdfunding & Grants</option>
+<option>General Consultation</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2">Tell us about your project</label>
+<textarea rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-primary transition-colors resize-none" placeholder="Describe your project, funding goals, and how we can help..."></textarea>
+</div>
+<button type="submit" class="w-full gold-gradient text-gray-900 py-4 !rounded-button font-semibold text-lg hover:opacity-90 transition-opacity whitespace-nowrap">
+Send Message
+</button>
+</form>
+<div class="mt-12 pt-8 border-t border-gray-700">
+<div class="grid md:grid-cols-3 gap-8 text-center">
+<div>
+<div class="w-12 h-12 gold-gradient !rounded-button flex items-center justify-center mx-auto mb-4">
+<i class="ri-mail-line text-gray-900 text-xl"></i>
+</div>
+<h4 class="font-semibold text-primary mb-2">Email</h4>
+<p class="text-gray-300">mirabelledammie8@gmail.com</p>
+</div>
+<div>
+<div class="w-12 h-12 gold-gradient !rounded-button flex items-center justify-center mx-auto mb-4">
+<i class="ri-phone-line text-gray-900 text-xl"></i>
+</div>
+<h4 class="font-semibold text-primary mb-2">Phone</h4>
+<p class="text-gray-300">+234 908 165 9043</p>
+</div>
+<div>
+<div class="w-12 h-12 gold-gradient !rounded-button flex items-center justify-center mx-auto mb-4">
+<i class="ri-time-line text-gray-900 text-xl"></i>
+</div>
+<h4 class="font-semibold text-primary mb-2">Response Time</h4>
+<p class="text-gray-300">Within 24 hours</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 border-t border-gray-800 py-16">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="lg:col-span-2">
+<div class="text-3xl font-playfair font-bold gradient-text mb-4">
+Mirabelle Inc
+</div>
+<p class="text-gray-300 mb-6 max-w-md">
+Empowering dreams through strategic crowdfunding and grant solutions. Your success is our mission.
+</p>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/oluwadamilola-oluwafemi-blessing-9b2351330" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="https://x.com/mirabelle_damie" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="https://www.instagram.com/mirabelle_dammie" target="_blank" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary hover:text-gray-900 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-primary mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#services" class="text-gray-300 hover:text-primary transition-colors">Services</a></li>
+<li><a href="#success" class="text-gray-300 hover:text-primary transition-colors">Success Stories</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-primary mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Crowdfunding Strategy</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Grant Writing</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Community Building</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Funding Roadmaps</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">
+© 2025 Mirabelle Inc. All rights reserved. | Privacy Policy | Terms of Service
+</p>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-toggle">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('active');
+});
+mobileMenu.addEventListener('click', function(e) {
+if (e.target.tagName === 'A') {
+mobileMenu.classList.remove('active');
+}
+});
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+if (targetElement) {
+const offsetTop = targetElement.offsetTop - 80;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="form-handler">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const submitBtn = form.querySelector('button[type="submit"]');
+const originalText = submitBtn.textContent;
+submitBtn.textContent = 'Sending...';
+submitBtn.disabled = true;
+setTimeout(() => {
+submitBtn.textContent = 'Message Sent!';
+submitBtn.classList.remove('gold-gradient');
+submitBtn.classList.add('bg-green-600');
+setTimeout(() => {
+submitBtn.textContent = originalText;
+submitBtn.disabled = false;
+submitBtn.classList.add('gold-gradient');
+submitBtn.classList.remove('bg-green-600');
+form.reset();
+}, 2000);
+}, 1000);
+});
+});
+</script>
+</body>
+</html>
